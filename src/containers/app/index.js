@@ -4,18 +4,38 @@ import Home from '../home'
 import About from '../about'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import AppBar from 'material-ui/AppBar';
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
+import FlatButton from 'material-ui/FlatButton'
 
 const muiTheme = getMuiTheme({
   spacing: 1000,
   fontFamily: 'Roboto, sans-serif',
 });
 
+const rightButtons = () => (
+  <div>
+    <FlatButton label='About' href='/about-us' />
+    <FlatButton label='Home' href='/' />
+    Count: 0
+  </div>
+);
+
 const App = () => (
   <MuiThemeProvider muiTheme={muiTheme}>
     <div>
       <header>
-        <Link to="/">Home</Link>
-        <Link to="/about-us">About</Link>
+        <AppBar
+          title='Home'
+          iconElementRight={rightButtons()}
+          style={{padding: '1rem'}}
+        />
+        
+        <Drawer docked={false} open={false}>
+          <MenuItem>Menu Item</MenuItem>
+          <MenuItem>Menu Item 2</MenuItem>
+        </Drawer>
       </header>
 
       <main>
