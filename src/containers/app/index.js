@@ -31,14 +31,14 @@ const App = () => (
           iconElementRight={rightButtons()}
           style={{padding: '1rem'}}
         />
-        
-        <Drawer docked={false} open={false}>
-          <MenuItem>Menu Item</MenuItem>
-          <MenuItem>Menu Item 2</MenuItem>
-        </Drawer>
       </header>
 
       <main>
+        <Drawer docked={false} open={false} 
+          containerStyle={{position: 'absolute', top: '68px', width: '200px'}}>
+          <MenuItem>Menu Item</MenuItem>
+          <MenuItem>Menu Item 2</MenuItem>
+        </Drawer>
         <Route exact path="/" component={Home} />
         <Route exact path="/about-us" component={About} />
       </main>
