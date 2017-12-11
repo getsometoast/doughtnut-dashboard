@@ -18,8 +18,8 @@ import {
 
 const rightButtons = props => (
   <div>
-    <FlatButton label='About' />
-    <FlatButton label='Home' />
+    <FlatButton label='About' href='/about-us' />
+    <FlatButton label='Home' href='/' />
     Count: {props.count}
   </div>
 );
