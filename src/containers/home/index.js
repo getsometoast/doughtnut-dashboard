@@ -16,12 +16,14 @@ import {
 
 const Home = props => (
   <Grid fluid>
+  <Row>
     <AppBar
       title="Home"
       iconClassNameRight="muidocs-icon-navigation-expand-more"
       style={{padding: '1rem'}}
     />
     <p>Count: {props.count}</p>
+  </Row>
   <Row style={{'margin-bottom': '1rem'}}>
     <Col xs={6} md={6}>
       <RaisedButton 
