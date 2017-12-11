@@ -15,59 +15,57 @@ import {
 const Home = props => (
   <Grid fluid>
   <Row>
-    <h1>Home</h1>
-    <p>Count: {props.count}</p>
-  </Row>
-  <Row>
-    <Col xs={6} md={3}>
+    <Col xs={12} md={12}>
+      <h1>Home</h1>
+      <p>Count: {props.count}</p>
+    </Col>
+    <Col xs={6} md={6}>
       <RaisedButton 
         label='Increment'
         onClick={props.increment}
         disabled={props.isIncrementing}
         primary={true}
         style={{
-          width: '220px',
+          width: '100%',
         }}
       />
     </Col>
-    <Col xs={6} md={3}>
+    <Col xs={6} md={6}>
       <RaisedButton 
         label='Increment Async'
         onClick={props.incrementAsync} 
         disabled={props.isIncrementing}
         primary={true}
         style={{
-          width: '220px',
+          width: '100%',
         }}
       />
     </Col>
-  </Row>
-  <Row>
-    <Col xs={6} md={3}>
+
+    <Col xs={6} md={6}>
       <RaisedButton 
         label='Decrement'
         onClick={props.decrement}
         disabled={props.isDecrementing}
         secondary={true}
         style={{
-          width: '220px',
+          width: '100%',
         }}
       />
     </Col>
-    <Col xs={6} md={3}>
+    <Col xs={6} md={6}>
       <RaisedButton 
         label='Decrement Async'
         onClick={props.decrementAsync} 
         disabled={props.isDecrementing} 
         secondary={true}
         style={{
-          width: '220px',
+          width: '100%',
         }}
       />
     </Col>
-  </Row>
-  <Row>
-    <Col xs={6} md={3}>  
+
+    <Col xs={12} md={12}>  
       <FlatButton
         label='Go to about page via redux'
         onClick={() => props.changePage()}
