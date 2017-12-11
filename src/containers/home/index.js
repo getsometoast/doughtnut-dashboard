@@ -14,11 +14,13 @@ import {
 
 const Home = props => (
   <Grid fluid>
-  <Row>
+  <Row style={{'margin-bottom': '1rem'}}>
     <Col xs={12} md={12}>
       <h1>Home</h1>
       <p>Count: {props.count}</p>
     </Col>
+  </Row>
+  <Row style={{'margin-bottom': '1rem'}}>
     <Col xs={6} md={6}>
       <RaisedButton 
         label='Increment'
@@ -41,7 +43,8 @@ const Home = props => (
         }}
       />
     </Col>
-
+  </Row>
+  <Row style={{'margin-bottom': '1rem'}}>
     <Col xs={6} md={6}>
       <RaisedButton 
         label='Decrement'
@@ -64,7 +67,8 @@ const Home = props => (
         }}
       />
     </Col>
-
+  </Row>
+  <Row>
     <Col xs={12} md={12}>  
       <FlatButton
         label='Go to about page via redux'
