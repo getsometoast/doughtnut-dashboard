@@ -2,6 +2,8 @@ import React from 'react'
 import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import RaisedButton from 'material-ui/RaisedButton'
+import FlatButton from 'material-ui/FlatButton'
 import {
   increment,
   incrementAsync,
@@ -14,17 +16,101 @@ const Home = props => (
     <h1>Home</h1>
     <p>Count: {props.count}</p>
 
-    <p>
-      <button onClick={props.increment} disabled={props.isIncrementing}>Increment</button>
-      <button onClick={props.incrementAsync} disabled={props.isIncrementing}>Increment Async</button>
-    </p>
+    <div 
+      style={{
+        width: '100%',
+        'margin-bottom': '10px'
+      }}>
 
-    <p>
-      <button onClick={props.decrement} disabled={props.isDecrementing}>Decrementing</button>
-      <button onClick={props.decrementAsync} disabled={props.isDecrementing}>Decrement Async</button>
-    </p>
+      <div
+        style={{
+          display: 'flex'
+        }}>
+        <div
+          style={{
+              'margin-right': '10px',
+              'margin-bottom': '10px'
+            }}>
 
-    <p><button onClick={() => props.changePage()}>Go to about page via redux</button></p>
+          <RaisedButton 
+            label='Increment'
+            onClick={props.increment}
+            disabled={props.isIncrementing}
+            primary={true}
+            style={{
+              width: '220px',
+            }}
+          />
+
+        </div>
+        <div
+          style={{
+              'margin-left': '10px'
+              }}>
+
+          <RaisedButton 
+            label='Increment Async'
+            onClick={props.incrementAsync} 
+            disabled={props.isIncrementing}
+            primary={true}
+            style={{
+              width: '220px',
+            }}
+          />
+        </div>
+      </div>
+      
+      <div
+        style={{
+          display: 'flex'
+        }}>
+        <div
+          style={{
+              'margin-right': '10px'
+            }}>
+
+          <RaisedButton 
+            label='Decrement'
+            onClick={props.decrement}
+            disabled={props.isDecrementing}
+            secondary={true}
+            style={{
+              width: '220px',
+            }}
+          />
+
+        </div>
+        <div
+          style={{
+              'margin-left': '10px'
+              }}>
+
+          <RaisedButton 
+            label='Decrement Async'
+            onClick={props.decrementAsync} 
+            disabled={props.isDecrementing} 
+            secondary={true}
+            style={{
+              width: '220px',
+            }}
+          />
+        </div>
+      </div>
+    </div>
+
+    <div 
+      style={{
+        width: '100%'
+      }}>
+        <FlatButton
+          label='Go to about page via redux'
+          onClick={() => props.changePage()}
+          primary={true}
+          style={{
+            width: '100%'
+          }}
+        />
+      </div>
   </div>
 )
 
