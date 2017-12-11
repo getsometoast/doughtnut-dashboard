@@ -11,8 +11,8 @@ const muiTheme = getMuiTheme({
 });
 
 const App = () => (
-  <div>
-    <MuiThemeProvider muiTheme={muiTheme}>
+  <MuiThemeProvider muiTheme={muiTheme}>
+    <div>
       <header>
         <Link to="/">Home</Link>
         <Link to="/about-us">About</Link>
@@ -22,8 +22,8 @@ const App = () => (
         <Route exact path="/" component={Home} />
         <Route exact path="/about-us" component={About} />
       </main>
-    </MuiThemeProvider>
-  </div>
+    </div>
+  </MuiThemeProvider>
 )
 
 export default App;

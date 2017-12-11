@@ -6,6 +6,8 @@ import RaisedButton from 'material-ui/RaisedButton'
 import FlatButton from 'material-ui/FlatButton'
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import AppBar from 'material-ui/AppBar';
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
 
 import {
   increment,
@@ -14,17 +16,30 @@ import {
   decrementAsync
 } from '../../modules/counter'
 
+const rightButtons = props => (
+  <div>
+    <FlatButton label='About' />
+    <FlatButton label='Home' />
+    Count: {props.count}
+  </div>
+);
+
 const Home = props => (
   <Grid fluid>
-  <Row>
+  <Row style={{marginBottom: '1rem'}}>
     <AppBar
-      title="Home"
-      iconClassNameRight="muidocs-icon-navigation-expand-more"
+      title='Home'
+      onLeftIconButtonClick={props.increment}
+      iconElementRight={rightButtons(props)}
       style={{padding: '1rem'}}
     />
-    <p>Count: {props.count}</p>
+    
+    <Drawer docked={false} open={false}>
+      <MenuItem>Menu Item</MenuItem>
+      <MenuItem>Menu Item 2</MenuItem>
+    </Drawer>
   </Row>
-  <Row style={{'margin-bottom': '1rem'}}>
+  <Row style={{marginBottom: '1rem'}}>
     <Col xs={6} md={6}>
       <RaisedButton 
         label='Increment'
@@ -48,7 +63,7 @@ const Home = props => (
       />
     </Col>
   </Row>
-  <Row style={{'margin-bottom': '1rem'}}>
+  <Row style={{marginBottom: '1rem'}}>
     <Col xs={6} md={6}>
       <RaisedButton 
         label='Decrement'
