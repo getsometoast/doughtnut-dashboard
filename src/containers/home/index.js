@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 import RaisedButton from 'material-ui/RaisedButton'
 import FlatButton from 'material-ui/FlatButton'
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import AppBar from 'material-ui/AppBar';
+
 import {
   increment,
   incrementAsync,
@@ -14,12 +16,12 @@ import {
 
 const Home = props => (
   <Grid fluid>
-  <Row style={{'margin-bottom': '1rem'}}>
-    <Col xs={12} md={12}>
-      <h1>Home</h1>
-      <p>Count: {props.count}</p>
-    </Col>
-  </Row>
+    <AppBar
+      title="Home"
+      iconClassNameRight="muidocs-icon-navigation-expand-more"
+      style={{padding: '1rem'}}
+    />
+    <p>Count: {props.count}</p>
   <Row style={{'margin-bottom': '1rem'}}>
     <Col xs={6} md={6}>
       <RaisedButton 
