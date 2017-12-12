@@ -8,13 +8,13 @@ import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import FlatButton from 'material-ui/FlatButton'
+import { connect } from 'react-redux'
 
-
-export default class App extends Component {
+class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {drawerOpen: false}
+    this.state = {drawerOpen: false, count: 0}
   }
 
   muiTheme = getMuiTheme({
@@ -26,7 +26,7 @@ export default class App extends Component {
     <div>
       <FlatButton label='About' href='/about-us' />
       <FlatButton label='Home' href='/' />
-      Count: 0
+      Count: {this.props.count}
     </div>
   );
 
@@ -66,3 +66,11 @@ export default class App extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  count: state.counter.count
+})
+
+export default connect(
+  mapStateToProps
+)(App)
