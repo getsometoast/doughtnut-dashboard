@@ -54,9 +54,9 @@ export default class App extends Component {
               docked={false}
               containerStyle={{top: '68px'}}
               width={200}
-              >
-              <MenuItem>Menu Item</MenuItem>
-              <MenuItem>Menu Item 2</MenuItem>
+            >
+              <MenuItem href='/'>Home</MenuItem>
+              <MenuItem href='/about-us'>About</MenuItem>
             </Drawer>
             <Route exact path="/" component={Home} />
             <Route exact path="/about-us" component={About} />
