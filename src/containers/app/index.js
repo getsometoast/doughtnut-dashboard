@@ -37,7 +37,9 @@ export default class App extends Component {
           <header>
             <AppBar
               title='Home'
-              onLeftIconButtonClick={ () => (this.setState(previousState => {drawerOpen: !previousState.drawerOpen}))}
+              onLeftIconButtonClick={ () => 
+                (this.setState(previousState => 
+                  {return { drawerOpen: !previousState.drawerOpen };}))}
               iconElementRight={this.rightButtons()}
               style={{padding: '1rem'}}
             />
@@ -46,9 +48,13 @@ export default class App extends Component {
           <main>
             <Drawer 
               open={this.state.drawerOpen} 
-              onRequestChange={() => (console.log('open state changed'))}
+              onRequestChange={() => 
+                (this.setState(previousState => 
+                  {return { drawerOpen: !previousState.drawerOpen };}))}
               docked={false}
-              containerStyle={{position: 'absolute', top: '68px', width: '200px'}}>
+              containerStyle={{top: '68px'}}
+              width={200}
+              >
               <MenuItem>Menu Item</MenuItem>
               <MenuItem>Menu Item 2</MenuItem>
             </Drawer>
