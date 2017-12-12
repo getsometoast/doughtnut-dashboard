@@ -15,7 +15,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {drawerOpen: false, count: 0}
-  }
+  };
 
   muiTheme = getMuiTheme({
     spacing: 1000,
@@ -51,7 +51,7 @@ class App extends Component {
               onRequestChange={() => 
                 (this.setState(previousState => 
                   {return { drawerOpen: !previousState.drawerOpen };}))}
-              docked={false}
+              docked={true}
               containerStyle={{top: '68px'}}
               width={200}
             >
