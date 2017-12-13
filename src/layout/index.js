@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Route from 'react-router-dom/Route'
 import Home from '../pages/home'
 import About from '../pages/about'
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles'
 import VisibleHeader from './header/VisibleHeader'
 import VisibleMenuDrawer from './menuDrawer/VisibleMenuDrawer'
 
