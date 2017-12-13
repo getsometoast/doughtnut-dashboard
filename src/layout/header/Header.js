@@ -10,12 +10,12 @@ const rightButtons = (count) => (
 );
 
 const Header = ({count, onMenuClicked}) => (
-	<AppBar
+  <AppBar
     title='The AppBar!'
     onLeftIconButtonClick={() => (onMenuClicked())}
     iconElementRight={rightButtons(count)}
     style={{padding: '1rem'}}
-		/>
+  />
 );
 
 export default Header
