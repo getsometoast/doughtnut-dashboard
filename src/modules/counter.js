@@ -1,14 +1,19 @@
+// THE NAMES OF THE ACTIONS w/ NAMESPACE...
 export const INCREMENT_REQUESTED = 'counter/INCREMENT_REQUESTED'
 export const INCREMENT = 'counter/INCREMENT'
 export const DECREMENT_REQUESTED = 'counter/DECREMENT_REQUESTED'
 export const DECREMENT = 'counter/DECREMENT'
 
+// HOW MIGHT THE BEST PRACTICES FIT INTO HERE??
+
+// THE INITIAL STATE
 const initialState = {
   count: 0,
   isIncrementing: false,
   isDecrementing: false
 }
 
+// THE REDUCERS
 export default (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT_REQUESTED:
@@ -42,6 +47,8 @@ export default (state = initialState, action) => {
   }
 }
 
+
+// THE ACTIONS
 export const increment = () => {
   return dispatch => {
     dispatch({
