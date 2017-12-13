@@ -1,5 +1,4 @@
 import { connect } from 'react-redux'
-import layoutActions from '../actions'
 import MenuDrawer from './MenuDrawer'
 
 const mapStateToProps = (state) => {
@@ -8,18 +7,8 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    onRequestChange: () => {
-      console.log("ON REQUEST CHANGE")
-      dispatch(layoutActions.toggleDrawer())
-    }
-  }
-}
-
 const VisibleMenuDrawer = connect(
-  mapStateToProps,
-  mapDispatchToProps
+  mapStateToProps
 )(MenuDrawer)
 
 export default VisibleMenuDrawer
