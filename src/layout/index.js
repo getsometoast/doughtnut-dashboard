@@ -6,14 +6,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import VisibleHeader from './header/VisibleHeader'
 import VisibleMenuDrawer from './menuDrawer/VisibleMenuDrawer'
-import { connect } from 'react-redux'
 
-class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {drawerOpen: false, count: 0}
-  };
+export default class App extends Component {
 
   muiTheme = getMuiTheme({
     spacing: 1000,
@@ -36,11 +30,3 @@ class App extends Component {
     );
   }
 }
-
-const mapStateToProps = state => ({
-  count: state.counter.count
-})
-
-export default connect(
-  mapStateToProps
-)(App)
