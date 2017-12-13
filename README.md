@@ -1,3 +1,17 @@
+## Dev Setup (mac)
+- Sublime + Package Control
+  - Babel Package
+- Chrome Browser
+  - React / Redux Dev Plugins
+- Brew
+  - Yarn Package
+
+```
+git clone https://github.com/getsometoast/doughtnut-dashboard.git
+cd doughtnut-dashboard
+yarn
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
