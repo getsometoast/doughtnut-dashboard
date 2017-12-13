@@ -5,7 +5,7 @@ import Header from './Header'
 const mapStateToProps = (state) => {
   return {
     count: state.counter.count,
-    open: state.layout.open
+    drawerOpen: state.layout.drawerOpen
   }
 }
 

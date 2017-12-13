@@ -1,7 +1,7 @@
-import layoutActions from '../actions'
+import layoutActions from './actions'
 
 const initialDrawerState = {
-  open: false,
+  drawerOpen: false,
 }
 
 export default (state = initialDrawerState, action) => {
@@ -9,7 +9,7 @@ export default (state = initialDrawerState, action) => {
     case layoutActions.TOGGLE_DRAWER:
       return {
         ...state,
-        open: !state.open 
+        drawerOpen: !state.drawerOpen
       }
 
     default:

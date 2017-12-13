@@ -1,9 +1,9 @@
 import React from 'react'
 import { Drawer, MenuItem } from 'material-ui';
 
-const MenuDrawer = ({open}) => (
+const MenuDrawer = ({drawerOpen}) => (
   <Drawer
-    open={open}
+    open={drawerOpen}
     docked={true}
     containerStyle={{top: '68px'}}
     width={200}
