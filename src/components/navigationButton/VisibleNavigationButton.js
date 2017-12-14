@@ -1,9 +1,13 @@
 import { connect } from 'react-redux'
 import { push } from 'react-router-redux'
-import NavigationButton from './NavigationButton'
+import FlatButton from 'material-ui/FlatButton'
 
 const mapStateToProps = state => ({
-  label: 'go to about page via redux' // todo - THIS DOESNT WORK where should this really go?
+  label: 'go to about page via redux',
+  primary: true,
+  style: {
+    width: '100%'
+  }
 })
 
 const mapDispatchToProps = (dispatch) => {
@@ -15,6 +19,6 @@ const mapDispatchToProps = (dispatch) => {
 const VisibleNavigationButton = connect(
   mapStateToProps,
   mapDispatchToProps
-)(NavigationButton)
+)(FlatButton)
 
 export default VisibleNavigationButton

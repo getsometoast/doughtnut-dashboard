@@ -4,7 +4,7 @@ import IncrementButton from '../../components/countButtons/IncrementCountButton'
 import IncrementAsyncButton from '../../components/countButtons/IncrementCountAsyncButton'
 import DecrementButton from '../../components/countButtons/DecrementCountButton'
 import DecrementAsyncButton from '../../components/countButtons/DecrementCountAsyncButton'
-import NavigationButton from '../../components/navigationButton/NavigationButton'
+import NavigationButton from '../../components/navigationButton/VisibleNavigationButton'
 
 class Home extends Component {
   render() {
