@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Route from 'react-router-dom/Route'
-import Home from '../pages/home'
-import About from '../pages/about'
+import Home from '../home'
+import About from '../about'
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles'
-import VisibleHeader from './header/VisibleHeader'
-import VisibleMenuDrawer from './menuDrawer/VisibleMenuDrawer'
+import VisibleHeader from '../../components/header/VisibleHeader'
+import VisibleMenuDrawer from '../../components/menuDrawer/VisibleMenuDrawer'
 
 export default class App extends Component {
 

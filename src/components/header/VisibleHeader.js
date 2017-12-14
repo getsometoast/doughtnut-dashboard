@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import layoutActions from '../actions'
+import layoutActions from '../../pages/layout/actions'
 import Header from './Header'
 
 const mapStateToProps = (state) => {
