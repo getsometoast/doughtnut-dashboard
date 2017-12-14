@@ -1,36 +1,36 @@
-import pageActions from './actions'
+import countActions from './actions'
 
 const initialState = {
-  count: 0,
+  value: 0,
   isIncrementing: false,
   isDecrementing: false
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case pageActions.INCREMENT_REQUESTED:
+    case countActions.INCREMENT_REQUESTED:
       return {
         ...state,
         isIncrementing: true
       }
 
-    case pageActions.INCREMENT:
+    case countActions.INCREMENT:
       return {
         ...state,
-        count: state.count + 1,
+        value: state.value + 1,
         isIncrementing: !state.isIncrementing
       }
 
-    case pageActions.DECREMENT_REQUESTED:
+    case countActions.DECREMENT_REQUESTED:
       return {
         ...state,
         isDecrementing: true
       }
 
-    case pageActions.DECREMENT:
+    case countActions.DECREMENT:
       return {
         ...state,
-        count: state.count - 1,
+        value: state.value - 1,
         isDecrementing: !state.isDecrementing
       }
 

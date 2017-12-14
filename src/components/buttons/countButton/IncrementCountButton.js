@@ -1,11 +1,11 @@
 import { connect } from 'react-redux'
-import pageActions from '../../../pages/actions'
+import countActions from './actions'
 import RaisedButton from 'material-ui/RaisedButton'
 
 const mapStateToProps = state => ({
-  label: 'increment', // refactor out so that the IncrementCountButton function creates the label
+  label: 'increment',
   primary: true,
-  disabled: state.page.isIncrementing,
+  disabled: state.count.isIncrementing,
   style: {
     width: '100%',
   }
@@ -14,7 +14,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch) => {
   return {
     onClick: () => {
-      dispatch(pageActions.increment())
+      dispatch(countActions.increment())
     }
   }
 }
