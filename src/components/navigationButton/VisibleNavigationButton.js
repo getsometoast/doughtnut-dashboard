@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 import { push } from 'react-router-redux'
 import FlatButton from 'material-ui/FlatButton'
+import { bindActionCreators } from 'redux'
 
 const mapStateToProps = state => ({
   label: 'go to about page via redux',
@@ -10,11 +11,9 @@ const mapStateToProps = state => ({
   }
 })
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    changePage: () => push('/about-us') // todo - THIS DOES NOT WORK
-  }
-}
+const mapDispatchToProps = dispatch => bindActionCreators({
+  onClick: () => push('/about-us')
+}, dispatch)
 
 const VisibleNavigationButton = connect(
   mapStateToProps,
