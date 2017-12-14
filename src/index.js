@@ -5,8 +5,6 @@ import { ConnectedRouter } from 'react-router-redux'
 import store, { history } from './store'
 import App from './pages/layout' 
 
-// import './index.css'
-
 const target = document.querySelector('#root')
 
 render(
