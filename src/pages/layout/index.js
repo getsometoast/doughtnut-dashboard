@@ -3,8 +3,8 @@ import Route from 'react-router-dom/Route'
 import Home from '../home'
 import About from '../about'
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles'
-import VisibleHeader from '../../components/header/VisibleHeader'
-import VisibleMenuDrawer from '../../components/menuDrawer/VisibleMenuDrawer'
+import VisibleHeader from '../../styleGuide/header/VisibleHeader'
+import VisibleMenuDrawer from '../../styleGuide/menuDrawer/VisibleMenuDrawer'
 
 export default class App extends Component {
 

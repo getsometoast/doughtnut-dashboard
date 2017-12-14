@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import IncrementButton from '../../components/buttons/countButton/IncrementCountButton'
-import DecrementButton from '../../components/buttons/countButton/DecrementCountButton'
-import IncrementAsyncButton from '../../components/buttons/countButton/IncrementCountAsyncButton'
-import DecrementAsyncButton from '../../components/buttons/countButton/DecrementCountAsyncButton'
-import NavigationButton from '../../components/buttons/navigationButton/VisibleNavigationButton'
+import IncrementButton from '../../styleGuide/buttons/countButton/IncrementCountButton'
+import DecrementButton from '../../styleGuide/buttons/countButton/DecrementCountButton'
+import IncrementAsyncButton from '../../styleGuide/buttons/countButton/IncrementCountAsyncButton'
+import DecrementAsyncButton from '../../styleGuide/buttons/countButton/DecrementCountAsyncButton'
+import NavigationButton from '../../styleGuide/buttons/navigationButton/VisibleNavigationButton'
 
 class Home extends Component {
   render() {
