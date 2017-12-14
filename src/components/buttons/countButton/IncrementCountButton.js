@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import pageActions from '../../pages/actions'
+import pageActions from '../../../pages/actions'
 import RaisedButton from 'material-ui/RaisedButton'
 
 const mapStateToProps = state => ({
