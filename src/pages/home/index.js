@@ -10,7 +10,7 @@ import {
   incrementAsync,
   decrement,
   decrementAsync
-} from '../../modules/counter'
+} from '../actions'
 
 class Home extends Component {
   render() {
@@ -82,9 +82,9 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({
-  count: state.counter.count,
-  isIncrementing: state.counter.isIncrementing,
-  isDecrementing: state.counter.isDecrementing
+  count: state.page.count,
+  isIncrementing: state.page.isIncrementing,
+  isDecrementing: state.page.isDecrementing
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
