@@ -6,7 +6,7 @@ import NavigationButton from './VisibleNavigationButton';
 
 describe('NavigationButton', () => {
   it('should render correctly', () => {
-    const output = shallow(<NavigationButton />);
+    const output = shallow(<NavigationButton /> );
     expect(shallowToJson(output)).toMatchSnapshot();
   });
 });
