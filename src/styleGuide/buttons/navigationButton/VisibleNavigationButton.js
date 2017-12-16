@@ -3,6 +3,7 @@ import { push } from 'react-router-redux'
 import FlatButton from 'material-ui/FlatButton'
 import { bindActionCreators } from 'redux'
 
+// todo clean this up
 const mapStateToProps = state => ({
   label: 'go to about page via redux',
   primary: true,
