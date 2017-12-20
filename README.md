@@ -5,6 +5,7 @@
   - React / Redux Dev Plugins
 - Brew
   - Yarn Package
+  - ADR Package (CLI for working with architecture decision records)
 
 ```
 git clone https://github.com/getsometoast/doughtnut-dashboard.git
