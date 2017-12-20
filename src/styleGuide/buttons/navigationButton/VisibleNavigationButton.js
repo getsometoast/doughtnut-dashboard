@@ -8,5 +8,5 @@ export default (props) =>
     label='go to about page via redux'
     primary={true}
     style={{width: '100%'}}
-    onClick={push('/about-us')}
+    onClick={() => push('/about-us')}
   />

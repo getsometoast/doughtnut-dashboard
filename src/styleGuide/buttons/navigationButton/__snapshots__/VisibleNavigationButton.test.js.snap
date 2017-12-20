@@ -7,17 +7,7 @@ exports[`NavigationButton should render correctly 1`] = `
   label="go to about page via redux"
   labelPosition="after"
   labelStyle={Object {}}
-  onClick={
-    Object {
-      "payload": Object {
-        "args": Array [
-          "/about-us",
-        ],
-        "method": "push",
-      },
-      "type": "@@router/CALL_HISTORY_METHOD",
-    }
-  }
+  onClick={[Function]}
   onKeyboardFocus={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
