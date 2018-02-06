@@ -5,8 +5,9 @@ import About from '../about'
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles'
 import VisibleHeader from '../../styleGuide/header/VisibleHeader'
 import VisibleMenuDrawer from '../../styleGuide/menuDrawer/VisibleMenuDrawer'
-import ViewBudgetPlan from '../budgetPlans/view'
-import CreateBudgetPlan from '../budgetPlans/create'
+import BudgetPlanView from '../budgetPlans/view'
+import BudgetPlanNew from '../budgetPlans/new/NewBudgetPlanPage'
+import TestPage from '../test-harness/TestPage'
 
 export default class App extends Component {
 
@@ -20,13 +21,13 @@ export default class App extends Component {
       <MuiThemeProvider muiTheme={this.muiTheme}>
         <div>
          <VisibleHeader />
-
           <main>
             <VisibleMenuDrawer />
             <Route exact path="/" component={Home} />
             <Route exact path="/about-us" component={About} />
-            <Route exact path="/view-budget-plan" component={ViewBudgetPlan} />
-            <Route exact path="/create-budget-plan" component={CreateBudgetPlan} />
+            <Route exact path="/test/1" component={TestPage} />
+            <Route exact path="/budgetPlans/:id" component={BudgetPlanView} />
+            <Route exact path="/budgetPlans/new" component={BudgetPlanNew} />
           </main>
         </div>
       </MuiThemeProvider>
