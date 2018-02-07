@@ -3,7 +3,7 @@ import { routerReducer } from 'react-router-redux'
 import count from '../styleGuide/buttons/countButton/reducers'
 import layout from '../pages/layout/reducers'
 import budgetPlans from '../pages/budgetPlans/reducers'
-import testHarness from '../pages/test-harness/TestReducers'
+import testHarness from '../pages/sandbox/TestReducers'
 
 export default combineReducers({
   routing: routerReducer,

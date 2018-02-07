@@ -7,7 +7,7 @@ import VisibleHeader from '../../styleGuide/header/VisibleHeader'
 import VisibleMenuDrawer from '../../styleGuide/menuDrawer/VisibleMenuDrawer'
 import BudgetPlanView from '../budgetPlans/view'
 import BudgetPlanNew from '../budgetPlans/new/NewBudgetPlanPage'
-import TestPage from '../test-harness/TestPage'
+import TestPage from '../sandbox/TestPage'
 
 export default class App extends Component {
 
