@@ -1,3 +1,10 @@
+## Persisting Form Data to Backend Spike
+I needed to know how to collect user entered data and POST it to an api using react / redux.  For the purpose of the spike I've used json-server to give me an endpoint I can post to.  To run the server from the root of the project run the following command:
+
+```
+json-server --watch ./src/pages/sandbox/mock-server/db.json --port 3001
+```
+
 ## Links to pages I read for the spike
 - [How connect works for higher order containers](https://www.sohamkamani.com/blog/2017/03/31/react-redux-connect-explained/)
 - [Info on local component state and component lifecycle](https://reactjs.org/docs/state-and-lifecycle.html)
