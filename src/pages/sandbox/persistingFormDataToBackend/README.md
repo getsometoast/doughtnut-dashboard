@@ -1,4 +1,4 @@
-## Persisting Form Data to Backend Spike
+# Persisting Form Data to Backend Spike
 I needed to know how to collect user entered data and POST it to an api using react / redux.  For the purpose of the spike I've used json-server to give me an endpoint I can post to.  To run the server from the root of the project run the following command:
 
 ```
