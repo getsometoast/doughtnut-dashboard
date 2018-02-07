@@ -5,8 +5,8 @@ import About from '../about'
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles'
 import VisibleHeader from '../../styleGuide/header/VisibleHeader'
 import VisibleMenuDrawer from '../../styleGuide/menuDrawer/VisibleMenuDrawer'
-import TestPage from '../sandbox/persistingFormDataToBackend/CreateTestPage'
-import ViewTestDataPage from '../sandbox/persistingFormDataToBackend/ViewTestDataPage'
+import CreateTestDataPage from '../sandbox/crudExample/CreateTestPage'
+import ViewTestDataPage from '../sandbox/crudExample/ViewTestDataPage'
 
 export default class App extends Component {
 
@@ -24,8 +24,8 @@ export default class App extends Component {
             <VisibleMenuDrawer />
             <Route exact path="/" component={Home} />
             <Route exact path="/about-us" component={About} />
-            <Route exact path="/test/1" component={TestPage} />
-            <Route exact path="/testData/:id" component={ViewTestDataPage} />
+            <Route exact path="/sandbox/crudExample/new" component={CreateTestDataPage} />
+            <Route exact path="/sandbox/crudExample/:id" component={ViewTestDataPage} />
           </main>
         </div>
       </MuiThemeProvider>
