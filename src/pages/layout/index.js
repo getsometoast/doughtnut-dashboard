@@ -7,7 +7,8 @@ import VisibleHeader from '../../styleGuide/header/VisibleHeader'
 import VisibleMenuDrawer from '../../styleGuide/menuDrawer/VisibleMenuDrawer'
 import BudgetPlanView from '../budgetPlans/view'
 import BudgetPlanNew from '../budgetPlans/new/NewBudgetPlanPage'
-import TestPage from '../sandbox/TestPage'
+import TestPage from '../sandbox/persistingFormDataToBackend/CreateTestPage'
+import ViewTestDataPage from '../sandbox/persistingFormDataToBackend/ViewTestDataPage'
 
 export default class App extends Component {
 
@@ -26,6 +27,7 @@ export default class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/about-us" component={About} />
             <Route exact path="/test/1" component={TestPage} />
+            <Route exact path="/testData/:id" component={ViewTestDataPage} />
             <Route exact path="/budgetPlans/:id" component={BudgetPlanView} />
             <Route exact path="/budgetPlans/new" component={BudgetPlanNew} />
           </main>

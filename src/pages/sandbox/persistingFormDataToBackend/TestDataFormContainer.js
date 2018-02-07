@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
-import TestDataComponent from './TestDataComponent'
+import TestDataComponent from './TestDataFormComponent'
 import createTestData from './TestActions'
 
 // i think this is where you wire up action creators that will be called by the component
 const mapDispatchToProps = (dispatch) => {
   return { // this should be the action we want to use to handle an event
-  	handleOnClick: () => { dispatch(createTestData.createTestData()) }
+  	handleOnClick: values => { dispatch(createTestData.createTestData(values)) } // need to pass argument to this
   }
 }
 

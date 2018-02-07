@@ -16,7 +16,8 @@ export default (state = INITIAL_STATE, action) => {
     case CREATE_TESTDATA_SUCCESS:
 			return { 
 				...state, 
-				testData: [...state.testData, action.payload]
+				testData: [...state.testData, action.payload],
+        currentTestData: action.payload
 			};
 
     default:

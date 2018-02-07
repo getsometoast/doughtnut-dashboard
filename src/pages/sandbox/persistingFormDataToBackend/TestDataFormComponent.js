@@ -33,21 +33,21 @@ class TestDataComponent extends Component {
   */
 
   handleChange = (event) => {
-    console.log(event.target.value);
-    
     const state = this.state;
-    console.log(state);
+    console.log('THE STATE: ' + state);
 
     state.currentTestData[event.target.name] = event.target.value;
-    this.setState(state);
+    this.setState(state); // this is setting the local component state and does not affect the global redux state
   };
 
   handleSubmitClick = (event) => {
     // get the data
     // create the action and pass it the data
     // use the action that is present on the props of the component set up in the container...
-    console.log(this.props);
-    this.props.handleOnClick(this.state.currentTestData);
+    console.log('TestDataCompoent: THE DATA TO PERSIST');
+    console.log(this.state.currentTestData); // current test data looks ok on here
+    console.log(this.props); // current test data is undefined on here
+    this.props.handleOnClick(this.state.currentTestData); // not sure if this is correct...
   };
 
   render() {
