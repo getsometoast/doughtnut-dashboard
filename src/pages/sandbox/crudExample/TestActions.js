@@ -52,7 +52,7 @@ export const createTestData = newTestData => {
 			  });
 
 				// move on to the view page to load the newly persisted data
-				history.push('/testData/' + response.data.id)
+				history.push('/sandbox/crudExample/view/' + response.data.id)
 	  	})
 	  	.catch((error) => {
 	  		// see what came back

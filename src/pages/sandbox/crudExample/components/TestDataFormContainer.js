@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import TestDataComponent from './TestDataFormComponent'
-import createTestData from './TestActions'
+import createTestData from '../TestActions'
 
 // i think this is where you wire up action creators that will be called by the component
 const mapDispatchToProps = (dispatch) => {
