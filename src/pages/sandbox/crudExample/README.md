@@ -32,3 +32,6 @@ json-server --watch ./src/pages/sandbox/_mock-server/db.json --port 3001
 - [Good example repo](https://github.com/rajaraodv/react-redux-blog/blob/8e5c6d490b73a6355a1a3feacb99860725845830/public/src/store/configureStore.js)
 - [Article on react component lifecycle](http://busypeoples.github.io/post/react-component-lifecycle/)
 - [Docs on rendering lists](https://reactjs.org/docs/lists-and-keys.html)
+- [Article explaining props.params for passing values in URL](https://scotch.io/tutorials/routing-react-apps-the-complete-guide#route-parameters)
+- [Info on route components and passing parameters](https://github.com/ReactTraining/react-router/issues/4105)
+

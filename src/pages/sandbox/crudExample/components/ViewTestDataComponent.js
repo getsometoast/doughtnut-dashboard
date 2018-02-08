@@ -5,36 +5,31 @@ class ViewTestDataComponent extends Component {
 
   constructor(props) {
     super(props);
-    console.log(props);
 
     this.state = {
-      currentTestData: {
-        id: this.props.currentTestData.id,
-        name: this.props.currentTestData.name,
-        amount: this.props.currentTestData.amount,
-        endDate: this.props.currentTestData.endDate,
-      },
+      currentTestData: this.props.currentTestData,
       editing: false,
-    }
-    console.log(this.state);
+    };
   }
 
   componentWillMount() {
-    console.log("COMPONENT WILL MOUNT...");
+    console.log("MOUNTING");
+  }
+
+  componentDidMount() {
+    console.log('MOUNTED');
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
+    console.log('RECIEVING NEW PROPS');
   }
 
   componentWillUnmount() {
-    console.log('unmounting');
+    console.log('UNMOUNTING');
   }
 
-// todo - need to understand the difference function definitions make to "this" keyword...
   handleClick = (event) => {
     if (this.state.editing) {
-      console.log('DISPATCH SAVE ACTION'); // dispatch the save action
       this.props.handleOnClick(this.state.currentTestData);
     }
     this.setState({editing: !this.state.editing});
@@ -45,10 +40,6 @@ class ViewTestDataComponent extends Component {
     state.currentTestData[event.target.name] = event.target.value;
     this.setState(state);
   }
-
-// use conditional rednering to flip between viewing and editing
-// need an action to change the flag editing = true / false
-// need and action to persist the data on save when finished editing
 
   render() {
     const { name, amount, endDate } = this.state.currentTestData;

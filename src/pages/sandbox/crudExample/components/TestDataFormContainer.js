@@ -6,7 +6,6 @@ import createTestData from '../TestActions'
 const mapDispatchToProps = (dispatch) => {
   return { // this should be the action we want to use to handle an event
   	handleOnClick: values => { dispatch(createTestData.createTestData(values)) }, // need to pass argument to this
-  	resetCurrentTestData: () => { dispatch(createTestData.resetCurrentTestData()) },
   }
 }
 

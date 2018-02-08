@@ -20,8 +20,6 @@ class TestDataComponent extends Component {
 
   componentWillMount() {
     console.log("COMPONENT WILL MOUNT...");
-    // maybe dispatch an action here to reset the current test data
-    this.props.resetCurrentTestData();
   }
 
   componentWillReceiveProps(nextProps) {
