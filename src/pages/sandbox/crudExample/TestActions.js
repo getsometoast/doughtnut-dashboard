@@ -20,6 +20,7 @@ action to get all test data
 import axios from 'axios'
 import history from '../../../history';
 
+export const NEW_TESTDATA = 'test/NEW_TESTDATA';
 export const CREATE_TESTDATA = 'test/CREATE_TESTDATA';
 export const CREATE_TESTDATA_REQUEST = 'test/CREATE_TESTDATA_REQUEST';
 export const CREATE_TESTDATA_SUCCESS = 'test/CREATE_TESTDATA_SUCCESS';

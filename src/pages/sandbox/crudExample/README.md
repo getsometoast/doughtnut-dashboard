@@ -30,3 +30,4 @@ json-server --watch ./src/pages/sandbox/_mock-server/db.json --port 3001
 - [What is redux?](https://quickleft.com/blog/redux-plain-english-workflow/)
 - [Explanation of connect function](https://www.sohamkamani.com/blog/2017/03/31/react-redux-connect-explained/)
 - [Good example repo](https://github.com/rajaraodv/react-redux-blog/blob/8e5c6d490b73a6355a1a3feacb99860725845830/public/src/store/configureStore.js)
+- [Article on react component lifecycle](http://busypeoples.github.io/post/react-component-lifecycle/)
