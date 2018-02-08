@@ -1,4 +1,4 @@
-import { CREATE_TESTDATA, CREATE_TESTDATA_SUCCESS } from './TestActions'
+import { CREATE_TESTDATA, CREATE_TESTDATA_SUCCESS, UPDATE_TESTDATA_SUCCESS } from './TestActions'
 
 const INITIAL_STATE = { 
   testData: [],
@@ -19,6 +19,14 @@ export default (state = INITIAL_STATE, action) => {
 				testData: [...state.testData, action.payload],
         currentTestData: action.payload
 			};
+
+
+    case UPDATE_TESTDATA_SUCCESS:
+      return { 
+        ...state, 
+        testData: [...state.testData, action.payload],
+        currentTestData: action.payload
+      };
 
     default:
       return state;

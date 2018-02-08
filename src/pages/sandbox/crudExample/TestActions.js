@@ -24,6 +24,7 @@ export const CREATE_TESTDATA = 'test/CREATE_TESTDATA';
 export const CREATE_TESTDATA_REQUEST = 'test/CREATE_TESTDATA_REQUEST';
 export const CREATE_TESTDATA_SUCCESS = 'test/CREATE_TESTDATA_SUCCESS';
 export const RECIEVE_TESTDATA = 'test/RECIEVE_TESTDATA'
+export const UPDATE_TESTDATA_SUCCESS = 'test/UPDATE_TESTDATA';
 
 const ROOT_URL = 'http://localhost:3001';
 
@@ -35,6 +36,7 @@ export const createTestData = newTestData => {
 	return (dispatch) => {
 		console.log('TestActions: CALLING API');
 
+		// do a put if it's an update, do a post if it's a create...
 	  return axios.post(`${ROOT_URL}/testData`, newTestData, {
         headers: {
           'Content-Type': 'application/json',
@@ -61,6 +63,27 @@ export const createTestData = newTestData => {
 	}
 }
 
+// action for updating test data to the server
+export const updateTestData = testData => {
+	return (dispatch) => {
+	  return axios.put(`${ROOT_URL}/testData/${testData.id}`, testData, {
+        headers: {
+          'Content-Type': 'application/json',
+        }
+    	})
+	  	.then((response) => {
+			  dispatch({
+			    type: UPDATE_TESTDATA_SUCCESS,
+			    payload: response.data
+			  });
+	  	})
+	  	.catch((error) => {
+	  		console.log('TestActions: HTTP ERROR RESPONSE: ' + error)
+	  	});
+	}
+}
+
 export default {
-	createTestData
+	createTestData,
+	updateTestData
 }

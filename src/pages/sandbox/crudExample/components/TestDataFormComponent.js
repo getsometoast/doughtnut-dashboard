@@ -47,7 +47,7 @@ class TestDataComponent extends Component {
     console.log('TestDataCompoent: THE DATA TO PERSIST');
     console.log(this.state.currentTestData); // current test data looks ok on here
     console.log(this.props); // current test data is undefined on here
-    this.props.handleOnClick(this.state.currentTestData); // not sure if this is correct...
+    this.props.handleOnClick(this.state.currentTestData);
   };
 
   render() {
