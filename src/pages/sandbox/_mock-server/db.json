@@ -2,19 +2,13 @@
   "budgetPlans": {},
   "testData": [
     {
-      "name": "National Insurance 2018",
-      "amount": "1800",
-      "endDate": "12/31/2018",
-      "id": "O5_l2S8"
-    },
-    {
       "name": "Holidays 2018",
-      "amount": "9400",
+      "amount": "39400",
       "endDate": "12/12/2018",
       "id": "JcqIGIJ"
     },
     {
-      "name": "Housing Deposit",
+      "name": "Housing Deposit 2018",
       "amount": "12000",
       "endDate": "12/12/22018",
       "id": "IIPLkS1"

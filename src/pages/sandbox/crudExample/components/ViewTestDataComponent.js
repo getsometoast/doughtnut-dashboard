@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextField, FlatButton } from 'material-ui'
+import { TextField, RaisedButton } from 'material-ui'
 
 class ViewTestDataComponent extends Component {
 
@@ -12,11 +12,15 @@ class ViewTestDataComponent extends Component {
     };
   }
 
-  handleClick = (event) => {
+  toggleEdit = (event) => {
     if (this.state.editing) {
       this.props.handleOnClick(this.state.currentTestData);
     }
     this.setState({editing: !this.state.editing});
+  }
+
+  handleDelete = (event) => {
+    this.props.deleteTestData(this.state.currentTestData.id);
   }
 
   handleTextInput = (event) => {
@@ -40,9 +44,15 @@ class ViewTestDataComponent extends Component {
         <h3>AMOUNT: {amountLabel}</h3>
         <h3>END DATE: {endDateLabel}</h3>
         <br /><br />
-        <FlatButton 
+        <RaisedButton 
           label={buttonLabel}
-          onClick={this.handleClick}
+          onClick={this.toggleEdit}
+          primary={true}
+        />
+        <RaisedButton 
+          marginleft='100px'
+          label='Delete'
+          onClick={this.handleDelete}
         />
       </div>
     )

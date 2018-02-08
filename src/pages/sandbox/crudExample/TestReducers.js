@@ -1,4 +1,4 @@
-import { SAVE_TESTDATA_SUCCESS, UPDATE_TESTDATA_SUCCESS, LOAD_TESTDATA_SUCCESS } from './TestActions'
+import { SAVE_TESTDATA_SUCCESS, UPDATE_TESTDATA_SUCCESS, LOAD_TESTDATA_SUCCESS, DELETE_TESTDATA_SUCCESS } from './TestActions'
 
 const INITIAL_STATE = { 
   testData: [],
@@ -32,6 +32,15 @@ export default (state = INITIAL_STATE, action) => {
         ...state,
         testData: action.payload
       }
+
+    // todo - should you even remove it from the local collection or just refresh the state from the server?
+    case DELETE_TESTDATA_SUCCESS:
+      const indexToDelete = state.testData.findIndex(testDataItem => testDataItem.id === action.payload);
+
+      return { 
+        ...state, 
+        testData: state.testData.slice(0, indexToDelete),
+      };
 
     default:
       return state;
