@@ -5,7 +5,7 @@ import createTestData from '../TestActions'
 // i think this is where you wire up action creators that will be called by the component
 const mapDispatchToProps = (dispatch) => {
   return { // this should be the action we want to use to handle an event
-  	handleOnClick: values => { dispatch(createTestData.createTestData(values)) }, // need to pass argument to this
+  	handleOnClick: values => { dispatch(createTestData.saveNewTestData(values)) }, // need to pass argument to this
   }
 }
 

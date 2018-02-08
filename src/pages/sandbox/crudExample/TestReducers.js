@@ -1,4 +1,4 @@
-import { CREATE_TESTDATA_SUCCESS, UPDATE_TESTDATA_SUCCESS } from './TestActions'
+import { SAVE_TESTDATA_SUCCESS, UPDATE_TESTDATA_SUCCESS } from './TestActions'
 
 const INITIAL_STATE = { 
   testData: [],
@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
 
-    case CREATE_TESTDATA_SUCCESS:
+    case SAVE_TESTDATA_SUCCESS:
 			return { 
 				...state, 
 				testData: [...state.testData, action.payload],
