@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextField, FlatButton } from 'material-ui'
+import { FlatButton, Table, TableHeader, TableRow, TableHeaderColumn, TableBody, TableRowColumn } from 'material-ui'
 import { withRouter } from 'react-router'
 import PropTypes from 'prop-types'
 
@@ -27,9 +27,34 @@ class ListTestDataComponent extends Component {
   }
 
   render() {
+
+    const testDataItems = this.props.testDataItems.map(item => 
+      <TableRow>
+        <TableRowColumn>{item.id}</TableRowColumn>
+        <TableRowColumn>{item.name}</TableRowColumn>
+        <TableRowColumn>${item.amount}</TableRowColumn>
+        <TableRowColumn>{item.endDate}</TableRowColumn>
+      </TableRow>
+    )
+
     return (
       <div className='container'>
         <FlatButton label='New' onClick={this.handleOnClick} />
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHeaderColumn>ID</TableHeaderColumn>
+              <TableHeaderColumn>Name</TableHeaderColumn>
+              <TableHeaderColumn>Amount</TableHeaderColumn>
+              <TableHeaderColumn>End Date</TableHeaderColumn>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+
+            {testDataItems}
+
+          </TableBody>
+        </Table>
       </div>
     )
   }
