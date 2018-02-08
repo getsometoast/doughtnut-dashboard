@@ -27,6 +27,10 @@ class ViewTestDataComponent extends Component {
     console.log(nextProps);
   }
 
+  componentWillUnmount() {
+    console.log('unmounting');
+  }
+
 // todo - need to understand the difference function definitions make to "this" keyword...
   handleClick = (event) => {
     if (this.state.editing) {

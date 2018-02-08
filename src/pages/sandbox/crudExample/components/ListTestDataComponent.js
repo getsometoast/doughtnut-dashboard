@@ -23,14 +23,20 @@ class ListTestDataComponent extends Component {
   }
 
   handleOnClick = (event) => {
-    this.props.history.push('/sandbox/crudExample/new')
+    this.props.history.push('/sandbox/crudExample/new');
+  }
+
+  handleRowClick = (rowId) => {
+    console.log(rowId);
+    console.log(this.props.testDataItems[rowId]);
+    // TODO - need to load the current test data object as the one in the ID I pass to the page....
+    // might need to dispatch an action that requests the view page with the correct id or something?
+    this.props.history.push(`/sandbox/crudExample/view/${this.props.testDataItems[rowId].id}`);
   }
 
   render() {
-
     const testDataItems = this.props.testDataItems.map(item => 
-      <TableRow>
-        <TableRowColumn>{item.id}</TableRowColumn>
+      <TableRow key={item.id}>
         <TableRowColumn>{item.name}</TableRowColumn>
         <TableRowColumn>${item.amount}</TableRowColumn>
         <TableRowColumn>{item.endDate}</TableRowColumn>
@@ -40,10 +46,9 @@ class ListTestDataComponent extends Component {
     return (
       <div className='container'>
         <FlatButton label='New' onClick={this.handleOnClick} />
-        <Table>
+        <Table onCellClick={this.handleRowClick} selectable={false}>
           <TableHeader>
             <TableRow>
-              <TableHeaderColumn>ID</TableHeaderColumn>
               <TableHeaderColumn>Name</TableHeaderColumn>
               <TableHeaderColumn>Amount</TableHeaderColumn>
               <TableHeaderColumn>End Date</TableHeaderColumn>
