@@ -10,27 +10,11 @@ class ListTestDataComponent extends Component {
     history: PropTypes.object.isRequired
   }
 
-  constructor(props) {
-    super(props);
-  }
-
-  componentWillMount() {
-    console.log("COMPONENT WILL MOUNT...");
-  }
-
-  componentWillReceiveProps(nextProps) {
-    console.log(nextProps);
-  }
-
   handleOnClick = (event) => {
     this.props.history.push('/sandbox/crudExample/new');
   }
 
   handleRowClick = (rowId) => {
-    console.log(rowId);
-    console.log(this.props.testDataItems[rowId]);
-    // TODO - need to load the current test data object as the one in the ID I pass to the page....
-    // might need to dispatch an action that requests the view page with the correct id or something?
     this.props.history.push(`/sandbox/crudExample/view/${this.props.testDataItems[rowId].id}`);
   }
 

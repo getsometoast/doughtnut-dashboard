@@ -15,5 +15,4 @@ function mapStateToProps(state, ownProps) {
   };
 }
 
-// might be a nicer way to pass the id through as a prop instead of using with router...
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ViewTestDataComponent));

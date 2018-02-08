@@ -10,10 +10,6 @@ class Header extends Component {
     history: PropTypes.object.isRequired
   }
 
-  constructor(props) {
-    super(props);
-  }
-
   handleNavigate = (location) => {
     console.log(location);
     return (event) => {
@@ -31,7 +27,7 @@ class Header extends Component {
   );
 
   render() {
-    const { count, onMenuClicked } = this.props;
+    const { count } = this.props;
 
     return (
       <AppBar

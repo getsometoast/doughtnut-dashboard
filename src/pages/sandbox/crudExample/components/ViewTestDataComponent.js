@@ -12,22 +12,6 @@ class ViewTestDataComponent extends Component {
     };
   }
 
-  componentWillMount() {
-    console.log("MOUNTING");
-  }
-
-  componentDidMount() {
-    console.log('MOUNTED');
-  }
-
-  componentWillReceiveProps(nextProps) {
-    console.log('RECIEVING NEW PROPS');
-  }
-
-  componentWillUnmount() {
-    console.log('UNMOUNTING');
-  }
-
   handleClick = (event) => {
     if (this.state.editing) {
       this.props.handleOnClick(this.state.currentTestData);
