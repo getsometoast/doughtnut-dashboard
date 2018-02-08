@@ -8,9 +8,9 @@ class TestDataComponent extends Component {
 
     this.state = {
       currentTestData: {
-        name: 'this',
-        amount: 'is a',
-        endDate: 'test',
+        name: '',
+        amount: '',
+        endDate: '',
       }
     };
 
@@ -20,6 +20,8 @@ class TestDataComponent extends Component {
 
   componentWillMount() {
     console.log("COMPONENT WILL MOUNT...");
+    // maybe dispatch an action here to reset the current test data
+    this.props.resetCurrentTestData();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -57,18 +59,21 @@ class TestDataComponent extends Component {
       <div className='container'>
         <TextField 
           name='name'
+          hintText='Budget Name'
           value={name}
           onChange={this.handleChange}
         />
         <br /><br />
         <TextField 
           name='amount'
+          hintText='Budget Amount'
           value={amount}
           onChange={this.handleChange}
         />
         <br /><br />
         <TextField 
           name='endDate'
+          hintText='Date Budget Ends'
           value={endDate}
           onChange={this.handleChange}
         />

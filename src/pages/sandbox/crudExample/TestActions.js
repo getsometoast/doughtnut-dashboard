@@ -20,7 +20,7 @@ action to get all test data
 import axios from 'axios'
 import history from '../../../history';
 
-export const NEW_TESTDATA = 'test/NEW_TESTDATA';
+export const RESET_TESTDATA = 'test/RESET_TESTDATA';
 export const CREATE_TESTDATA = 'test/CREATE_TESTDATA';
 export const CREATE_TESTDATA_REQUEST = 'test/CREATE_TESTDATA_REQUEST';
 export const CREATE_TESTDATA_SUCCESS = 'test/CREATE_TESTDATA_SUCCESS';
@@ -28,6 +28,12 @@ export const RECIEVE_TESTDATA = 'test/RECIEVE_TESTDATA'
 export const UPDATE_TESTDATA_SUCCESS = 'test/UPDATE_TESTDATA';
 
 const ROOT_URL = 'http://localhost:3001';
+
+export const resetCurrentTestData = () => {
+	return {
+    type: RESET_TESTDATA
+  }
+}
 
 // action for persisting test data to the server
 export const createTestData = newTestData => {
@@ -86,5 +92,6 @@ export const updateTestData = testData => {
 
 export default {
 	createTestData,
-	updateTestData
+	updateTestData,
+	resetCurrentTestData
 }
