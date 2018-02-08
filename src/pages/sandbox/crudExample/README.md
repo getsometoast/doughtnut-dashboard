@@ -34,4 +34,6 @@ json-server --watch ./src/pages/sandbox/_mock-server/db.json --port 3001
 - [Docs on rendering lists](https://reactjs.org/docs/lists-and-keys.html)
 - [Article explaining props.params for passing values in URL](https://scotch.io/tutorials/routing-react-apps-the-complete-guide#route-parameters)
 - [Info on route components and passing parameters](https://github.com/ReactTraining/react-router/issues/4105)
+- [Using the component did mount method to fetch data](https://www.robinwieruch.de/react-fetching-data/)
+- [Where and when to fetch data with redux](https://daveceddia.com/where-fetch-data-redux/)
 

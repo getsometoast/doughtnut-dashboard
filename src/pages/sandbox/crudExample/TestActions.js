@@ -4,6 +4,7 @@ import history from '../../../history';
 export const CREATE_TESTDATA = 'test/CREATE_TESTDATA';
 export const SAVE_TESTDATA_SUCCESS = 'test/SAVE_TESTDATA_SUCCESS';
 export const UPDATE_TESTDATA_SUCCESS = 'test/UPDATE_TESTDATA_SUCCESS';
+export const LOAD_TESTDATA_SUCCESS = 'test/LOAD_TESTDATA_SUCCESS';
 
 const ROOT_URL = 'http://localhost:3001';
 
@@ -19,6 +20,25 @@ const updateTestDataSuccess = testData => {
     type: UPDATE_TESTDATA_SUCCESS,
     payload: testData
   }
+}
+
+const loadTestDataSuccess = testData => {
+	return {
+		type: LOAD_TESTDATA_SUCCESS,
+		payload: testData
+	}
+}
+
+export const loadTestData = () => {
+	return (dispatch) => {
+		return axios.get(`${ROOT_URL}/testData`)
+		.then(response => {
+			dispatch(loadTestDataSuccess(response.data));
+		})
+		.catch(error => {
+			console.log('Handle Error Here... ' + error)
+		})
+	}
 }
 
 export const saveNewTestData = newTestData => {
@@ -57,4 +77,5 @@ export const updateTestData = testData => {
 export default {
 	saveNewTestData,
 	updateTestData,
+	loadTestData,
 }

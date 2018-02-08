@@ -10,6 +10,10 @@ class ListTestDataComponent extends Component {
     history: PropTypes.object.isRequired
   }
 
+  componentDidMount() {
+    this.props.loadTestData();
+  }
+
   handleOnClick = (event) => {
     this.props.history.push('/sandbox/crudExample/new');
   }

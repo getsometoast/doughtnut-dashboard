@@ -1,4 +1,4 @@
-import { SAVE_TESTDATA_SUCCESS, UPDATE_TESTDATA_SUCCESS } from './TestActions'
+import { SAVE_TESTDATA_SUCCESS, UPDATE_TESTDATA_SUCCESS, LOAD_TESTDATA_SUCCESS } from './TestActions'
 
 const INITIAL_STATE = { 
   testData: [],
@@ -26,6 +26,12 @@ export default (state = INITIAL_STATE, action) => {
         ...state, 
         testData: updatedItems,
       };
+
+    case LOAD_TESTDATA_SUCCESS:
+      return {
+        ...state,
+        testData: action.payload
+      }
 
     default:
       return state;
