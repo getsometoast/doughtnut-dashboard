@@ -33,21 +33,20 @@ class ViewTestDataComponent extends Component {
     this.setState({editing: !this.state.editing});
   }
 
+  buildTextField = (name, value) => {
+    return <TextField name={name} value={value} onChange={this.handleTextInput} />;
+  }
+
   buildButton = (label, onClick, primary) => {
-    return <RaisedButton 
-        marginleft='100px'
-        label={label}
-        onClick={onClick}
-        primary={primary}
-      />;
+    return <RaisedButton label={label} onClick={onClick} primary={primary} />;
   }
 
   render() {
     const { name, amount, endDate } = this.state.currentTestData;
 
-    let nameLabel = this.state.editing ? <TextField name='name' value={name} onChange={this.handleTextInput} /> : name;
-    let amountLabel = this.state.editing ? <TextField name='amount' value={amount} onChange={this.handleTextInput} /> : amount;
-    let endDateLabel = this.state.editing ? <TextField name='endDate' value={endDate} onChange={this.handleTextInput} /> : endDate;
+    let nameLabel = this.state.editing ? this.buildTextField('name', name) : name;
+    let amountLabel = this.state.editing ? this.buildTextField('amount', amount) : amount;
+    let endDateLabel = this.state.editing ? this.buildTextField('endDate', endDate) : endDate;
     let buttonLabel = this.state.editing ? 'Save' : 'Edit';
 
     let deleteButton = this.state.editing ? null : this.buildButton('Delete', this.handleDelete, false);
