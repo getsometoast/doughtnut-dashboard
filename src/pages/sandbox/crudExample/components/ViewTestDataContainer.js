@@ -5,7 +5,7 @@ import { withRouter } from 'react-router';
 
 const mapDispatchToProps = (dispatch) => {
   return {
-  	handleOnClick: values => { dispatch(createTestData.updateTestData(values)) },
+  	updateTestData: values => { dispatch(createTestData.updateTestData(values)) },
   	deleteTestData: id => { dispatch(createTestData.deleteTestData(id)) },
   }
 }
