@@ -29,7 +29,7 @@ class TestDataComponent extends Component {
   buildTextField = (name, value, hintText) => {
     return <TextField name={name} value={value} hintText={hintText} onChange={this.handleTextInput} />;
   }
-  
+
 
   render() {
     const { name, amount, endDate } = this.state.currentTestData;
