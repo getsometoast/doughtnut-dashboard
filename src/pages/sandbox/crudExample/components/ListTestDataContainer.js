@@ -10,7 +10,7 @@ const mapDispatchToProps = (dispatch) => {
 
 function mapStateToProps(state, ownProps) {
   return {
-  	testDataItems: state.testHarness.testData,
+  	testDataItems: state.sandbox.crudExample.testData,
   };
 }
 

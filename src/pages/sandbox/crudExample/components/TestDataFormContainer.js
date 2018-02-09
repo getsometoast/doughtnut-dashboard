@@ -8,10 +8,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-function mapStateToProps(state, ownProps) {
-  return {
- 		currentTestData: state.testHarness.currentTestData,
-  };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(TestDataComponent);
+export default connect((state, ownProps) => { return {}; }, mapDispatchToProps)(TestDataComponent);	

@@ -12,7 +12,7 @@ const mapDispatchToProps = (dispatch) => {
 
 function mapStateToProps(state, ownProps) {
   return {
- 		currentTestData: state.testHarness.testData.find(item => item.id === ownProps.match.params.id),
+ 		currentTestData: state.sandbox.crudExample.testData.find(item => item.id === ownProps.match.params.id),
   };
 }
 
