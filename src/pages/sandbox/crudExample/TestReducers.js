@@ -18,7 +18,6 @@ export default (state = INITIAL_STATE, action) => {
         if (testDataItem.id === action.payload.id) {
           return { ...testDataItem, ...action.payload }
         }
-
         return testDataItem;
       });
 

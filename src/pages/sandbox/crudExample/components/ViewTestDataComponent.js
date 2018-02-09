@@ -23,23 +23,26 @@ class ViewTestDataComponent extends Component {
     this.props.deleteTestData(this.state.currentTestData.id);
   }
 
+  handleCancel = (event) => {
+    this.setState({editing: !this.state.editing});
+  }
+
+  buildButton = (label, onClick, primary) => {
+    return <RaisedButton label={label} onClick={onClick} primary={primary} />;
+  }
+
+
+  /* DUPLICATION */
   handleTextInput = (event) => {
     const state = this.state;
     state.currentTestData[event.target.name] = event.target.value;
     this.setState(state);
   }
 
-  handleCancel = (event) => {
-    this.setState({editing: !this.state.editing});
+  buildTextField = (name, value, hintText=undefined) => {
+    return <TextField name={name} value={value} hintText={hintText} onChange={this.handleTextInput} />;
   }
 
-  buildTextField = (name, value) => {
-    return <TextField name={name} value={value} onChange={this.handleTextInput} />;
-  }
-
-  buildButton = (label, onClick, primary) => {
-    return <RaisedButton label={label} onClick={onClick} primary={primary} />;
-  }
 
   render() {
     const { name, amount, endDate } = this.state.currentTestData;
