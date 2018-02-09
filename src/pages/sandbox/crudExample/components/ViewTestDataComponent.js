@@ -33,6 +33,15 @@ class ViewTestDataComponent extends Component {
     this.setState({editing: !this.state.editing});
   }
 
+  buildButton = (label, onClick, primary) => {
+    return <RaisedButton 
+        marginleft='100px'
+        label={label}
+        onClick={onClick}
+        primary={primary}
+      />;
+  }
+
   render() {
     const { name, amount, endDate } = this.state.currentTestData;
 
@@ -41,19 +50,9 @@ class ViewTestDataComponent extends Component {
     let endDateLabel = this.state.editing ? <TextField name='endDate' value={endDate} onChange={this.handleTextInput} /> : endDate;
     let buttonLabel = this.state.editing ? 'Save' : 'Edit';
 
-    let deleteButton = this.state.editing ? null : 
-        <RaisedButton 
-          marginleft='100px'
-          label='Delete'
-          onClick={this.handleDelete}
-        />;
-
-    let cancelButton = !this.state.editing ? null :
-        <RaisedButton 
-          marginleft='100px'
-          label='Cancel'
-          onClick={this.handleCancel}
-        />
+    let deleteButton = this.state.editing ? null : this.buildButton('Delete', this.handleDelete, false);
+    let cancelButton = !this.state.editing ? null : this.buildButton('Cancel', this.handleCancel, false);
+    let editButton = this.buildButton(buttonLabel, this.toggleEdit, true);
 
     return (
       <div className='container'>
@@ -61,11 +60,7 @@ class ViewTestDataComponent extends Component {
         <h3>AMOUNT: {amountLabel}</h3>
         <h3>END DATE: {endDateLabel}</h3>
         <br /><br />
-        <RaisedButton 
-          label={buttonLabel}
-          onClick={this.toggleEdit}
-          primary={true}
-        />
+        {editButton}
         {deleteButton}
         {cancelButton}
       </div>
