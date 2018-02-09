@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { FlatButton, Table, TableHeader, TableRow, TableHeaderColumn, TableBody, TableRowColumn } from 'material-ui'
+import { RaisedButton, Table, TableHeader, TableRow, TableHeaderColumn, TableBody, TableRowColumn } from 'material-ui'
 import { withRouter } from 'react-router'
 import PropTypes from 'prop-types'
 
@@ -33,7 +33,7 @@ class ListTestDataComponent extends Component {
 
     return (
       <div className='container'>
-        <FlatButton label='New' onClick={this.handleOnClick} />
+        <RaisedButton label='New' onClick={this.handleOnClick} />
         <Table onCellClick={this.handleRowClick} selectable={false}>
           <TableHeader>
             <TableRow>
