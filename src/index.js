@@ -24,7 +24,7 @@ render(
     <ConnectedRouter history={history}>
       <div>
         <MuiThemeProvider muiTheme={muiTheme}>
-	      	<App />
+	      	<Route exact path="/" component={App} />
 	      	<Route exact path="/sandbox/crudExample" component={ListTestDataPage} />
 	        <Route exact path="/sandbox/layoutExample" component={MasterLayoutPage} />
 	        <Route exact path="/sandbox/crudExample/new" component={CreateTestDataPage} />
