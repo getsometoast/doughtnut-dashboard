@@ -5,7 +5,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 const mapStateToProps = state => ({
   label: 'increment async',
   secondary: true,
-  disabled: state.count.isIncrementing,
+  disabled: state.application.count.isIncrementing,
   style: {
     width: '100%',
   }

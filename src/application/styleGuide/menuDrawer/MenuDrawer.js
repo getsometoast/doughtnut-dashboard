@@ -1,6 +1,7 @@
 import React from 'react'
 import { Drawer, MenuItem } from 'material-ui';
 
+// todo - this should be using the history component to change the location...
 const MenuDrawer = ({drawerOpen}) => (
   <Drawer
     open={drawerOpen}

@@ -3,7 +3,7 @@ import MenuDrawer from './MenuDrawer'
 
 const mapStateToProps = (state) => {
   return {
-    drawerOpen: state.layout.drawerOpen
+    drawerOpen: state.application.layout.drawerOpen
   }
 }
 

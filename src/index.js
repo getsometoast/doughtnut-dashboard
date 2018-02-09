@@ -6,11 +6,11 @@ import store from './store'
 import history from './history'
 import Route from 'react-router-dom/Route'
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles'
-import App from './pages/layout' 
-import CreateTestDataPage from './pages/sandbox/crudExample/new/CreateTestPage'
-import ViewTestDataPage from './pages/sandbox/crudExample/view/ViewTestDataPage'
-import ListTestDataPage from './pages/sandbox/crudExample/list/ListTestDataPage'
-import MasterLayoutPage from './pages/sandbox/layoutExample/MasterLayoutPage'
+import App from './application/pages/layout' 
+import CreateTestDataPage from './sandbox/crudExample/new/CreateTestPage'
+import ViewTestDataPage from './sandbox/crudExample/view/ViewTestDataPage'
+import ListTestDataPage from './sandbox/crudExample/list/ListTestDataPage'
+import MasterLayoutPage from './sandbox/layoutExample/MasterLayoutPage'
 
 const target = document.querySelector('#root')
 

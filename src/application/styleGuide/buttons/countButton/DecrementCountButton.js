@@ -3,9 +3,9 @@ import countActions from './actions'
 import RaisedButton from 'material-ui/RaisedButton'
 
 const mapStateToProps = state => ({
-  label: 'decrement async',
-  secondary: true,
-  disabled: state.count.isDecrementing,
+  label: 'decrement',
+  primary: true,
+  disabled: state.application.count.isDecrementing,
   style: {
     width: '100%',
   }
@@ -14,14 +14,14 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch) => {
   return {
     onClick: () => {
-      dispatch(countActions.decrementAsync())
+      dispatch(countActions.decrement())
     }
   }
 }
 
-const DecrementCountAsyncButton = connect(
+const DecrementCountButton = connect(
   mapStateToProps,
   mapDispatchToProps
 )(RaisedButton)
 
-export default DecrementCountAsyncButton
+export default DecrementCountButton
