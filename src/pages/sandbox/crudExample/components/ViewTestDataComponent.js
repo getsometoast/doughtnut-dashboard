@@ -53,6 +53,7 @@ class ViewTestDataComponent extends Component {
           marginleft='100px'
           label='Delete'
           onClick={this.handleDelete}
+          disabled={this.state.editing}
         />
       </div>
     )
