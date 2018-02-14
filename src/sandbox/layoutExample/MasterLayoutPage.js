@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './components/HeaderComponent'
+import Header from './components/HeaderContainer'
 
 /*
 master layout

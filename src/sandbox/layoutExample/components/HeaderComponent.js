@@ -11,14 +11,12 @@ class HeaderComponent extends Component {
   }
 
   render() {
-    //const testDataItems = this.props.testDataItems;
-
-    // do an appbar from material ui
     return (
       <div>
         <AppBar
           title='Layout Example'
           style={{padding: '1rem'}}
+          onLeftIconButtonClick={() => (this.props.onMenuClicked())}
         />
       </div>
     )
