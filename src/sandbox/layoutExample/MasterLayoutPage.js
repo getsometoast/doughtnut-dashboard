@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from './components/HeaderComponent'
 
 /*
 master layout
@@ -22,6 +23,7 @@ class MasterLayoutPage extends Component {
   render() {
     return (
       <div>
+      	<Header />
 				<h1>THE MASTER LAYOUT PAGE</h1>
 				<div>Header Component</div>
 				<div>Side Menu Component</div>

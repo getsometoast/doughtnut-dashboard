@@ -22,7 +22,6 @@ const muiTheme = getMuiTheme({
 render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <div>
         <MuiThemeProvider muiTheme={muiTheme}>
 	      	<Route exact path="/" component={App} />
 	      	<Route exact path="/sandbox/crudExample" component={ListTestDataPage} />
@@ -30,7 +29,6 @@ render(
 	        <Route exact path="/sandbox/crudExample/new" component={CreateTestDataPage} />
 	        <Route exact path="/sandbox/crudExample/view/:id" component={ViewTestDataPage} />
 				</MuiThemeProvider>
-      </div>
     </ConnectedRouter>
   </Provider>,
   target
