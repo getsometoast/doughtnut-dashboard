@@ -1,4 +1,4 @@
-import TOGGLE_MENU from './Actions'
+import { TOGGLE_MENU } from './Actions'
 
 const INITIAL_STATE = { 
   layoutStuff: [],
