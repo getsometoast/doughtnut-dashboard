@@ -3,7 +3,7 @@ import MenuComponent from './MenuComponent'
 
 const mapStateToProps = (state) => {
   return {
-    drawerOpen: state.sandbox.layoutExample.menuOpen
+    menuOpen: state.sandbox.layoutExample.menuOpen
   }
 }
 

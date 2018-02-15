@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Drawer, MenuItem } from 'material-ui';
 import { withRouter } from 'react-router'
+import PropTypes from 'prop-types'
 
 class MenuComponent extends Component {
 	static propTypes = {
@@ -9,15 +10,15 @@ class MenuComponent extends Component {
     history: PropTypes.object.isRequired
 	}
 
-	const handleMenuItemClick = (page) => {
+	handleMenuItemClick = (page) => {
 		return (event) => {
 			this.props.history.push(`${page}`);
 		}
 	}
 
-	const MenuComponent = ({drawerOpen}) => (
+	MenuComponent = (menuOpen) => (
 	  <Drawer
-	    open={drawerOpen}
+	    open={menuOpen}
 	    docked={true}
 	    containerStyle={{top: '68px'}}
 	    width={200}
@@ -28,9 +29,9 @@ class MenuComponent extends Component {
 	)
 
 	render() {
-		const drawOpen = this.props.drawOpen;
-
-		return this.MenuComponent(drawOpen);
+		const menuOpen = this.props.menuOpen;
+console.log(`MenuComponent.drawOpen: ${menuOpen}`);
+		return this.MenuComponent(menuOpen);
 	};
 }
 

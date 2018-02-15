@@ -2,7 +2,7 @@ import { TOGGLE_MENU } from './Actions'
 
 const INITIAL_STATE = { 
   layoutStuff: [],
-  drawerOpen: false,
+  menuOpen: false,
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -10,7 +10,7 @@ export default (state = INITIAL_STATE, action) => {
   	case TOGGLE_MENU:
       return {
         ...state,
-        drawerOpen: !state.drawerOpen
+        menuOpen: !state.menuOpen
       }
 
     default:

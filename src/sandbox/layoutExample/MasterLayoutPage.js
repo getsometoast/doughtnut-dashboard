@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Header from './components/HeaderContainer'
+import Header from './components/HeaderContainer';
+import Menu from './components/MenuContainer';
 
 /*
 master layout
@@ -24,6 +25,7 @@ class MasterLayoutPage extends Component {
     return (
       <div>
       	<Header />
+      	<Menu />
 				<h1>THE MASTER LAYOUT PAGE</h1>
 				<div>Header Component</div>
 				<div>Side Menu Component</div>
