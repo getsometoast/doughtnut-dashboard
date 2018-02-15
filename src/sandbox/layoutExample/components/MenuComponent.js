@@ -30,7 +30,6 @@ class MenuComponent extends Component {
 
 	render() {
 		const menuOpen = this.props.menuOpen;
-console.log(`MenuComponent.drawOpen: ${menuOpen}`);
 		return this.MenuComponent(menuOpen);
 	};
 }
