@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from './components/HeaderContainer';
 import Menu from './components/MenuContainer';
+import ExamplePage from './components/PageComponent';
+import Footer from './components/FooterComponent';
 
 /*
 master layout
@@ -26,11 +28,8 @@ class MasterLayoutPage extends Component {
       <div>
       	<Header />
       	<Menu />
-				<h1>THE MASTER LAYOUT PAGE</h1>
-				<div>Header Component</div>
-				<div>Side Menu Component</div>
-				<div>Content Container</div>
-				<div>Footer Component</div>
+				<ExamplePage />
+				<Footer />
       </div>
     );
   }
