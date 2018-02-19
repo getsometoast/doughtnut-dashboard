@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import Header from './components/HeaderContainer';
 import Menu from './components/MenuContainer';
 import ExamplePage from './components/PageComponent';
+import ExamplePage2 from './components/PageComponent';
 import Footer from './components/FooterComponent';
+import Route from 'react-router-dom/Route'
 
 /*
 master layout
@@ -30,6 +32,8 @@ class MasterLayoutPage extends Component {
       	<Menu />
 				<ExamplePage />
 				<Footer />
+        <Route exact path="/sandbox/layoutExample/example1" component={ExamplePage} />
+        <Route exact path="/sandbox/layoutExample/example2" component={ExamplePage2} />
       </div>
     );
   }

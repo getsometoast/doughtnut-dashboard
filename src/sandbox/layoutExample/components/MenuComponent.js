@@ -16,6 +16,8 @@ class MenuComponent extends Component {
 		}
 	}
 
+	// TODO - Figure out how to just change the one page in the page container for the routes....
+
 	MenuComponent = (menuOpen) => (
 	  <Drawer
 	    open={menuOpen}
@@ -23,8 +25,8 @@ class MenuComponent extends Component {
 	    containerStyle={{top: '68px'}}
 	    width={200}
 	  >
-	    <MenuItem onClick={this.handleMenuItemClick('/')}>Home</MenuItem>
-	    <MenuItem onClick={this.handleMenuItemClick('/About')}>About</MenuItem>
+	    <MenuItem onClick={this.handleMenuItemClick('/sandbox/layoutExample/example1')}>Example Page 1</MenuItem>
+	    <MenuItem onClick={this.handleMenuItemClick('/sandbox/layoutExample/example2')}>Example Page 2</MenuItem>
 	  </Drawer>
 	)
 
