@@ -4,7 +4,7 @@ import TestDataView from './view/ViewTestDataContainer'
 import TestDataList from './list/ListTestDataContainer'
 import Route from 'react-router-dom/Route'
 
-class CrudExample extends Component {
+class CrudExamplePage extends Component {
   render() {
     return (
     <div>
@@ -18,4 +18,4 @@ class CrudExample extends Component {
   }
 }
 
-export default CrudExample;
+export default CrudExamplePage;
