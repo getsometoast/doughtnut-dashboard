@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 
 class PageComponent extends Component {
 
-  title = 'Master Page Layout Example Page 1';
-
   render() {
     return (
       <div>
-        <h1>{this.title}</h1>
-        <p>I'm a page</p>
+        <h1>{this.props.content.title}</h1>
+        <p>{this.props.content.article}</p>
       </div>
     )
   }
