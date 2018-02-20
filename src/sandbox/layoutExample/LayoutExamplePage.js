@@ -5,7 +5,7 @@ import ExamplePage from './components/PageContainer';
 import Footer from './components/FooterComponent';
 import Route from 'react-router-dom/Route'
 
-class MasterLayoutPage extends Component {
+class LayoutExamplePage extends Component {
   render() {
     return (
       <div>
@@ -18,4 +18,4 @@ class MasterLayoutPage extends Component {
   }
 }
 
-export default MasterLayoutPage;
+export default LayoutExamplePage;

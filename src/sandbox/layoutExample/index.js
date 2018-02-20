@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import MasterLayoutPage from './MasterLayoutPage'
+import LayoutExamplePage from './LayoutExamplePage'
 import Route from 'react-router-dom/Route'
 
 class LayoutExample extends Component {
   render() {
     return (
     <div>
-      <Route path="/sandbox/layoutExample" component={MasterLayoutPage} />
+      <Route path="/sandbox/layoutExample" component={LayoutExamplePage} />
     </div>
     );
   }
