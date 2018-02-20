@@ -6,4 +6,4 @@ I use [json-server](https://github.com/typicode/json-server) to provide a mock b
 ## Example Pages:
 - [CRUD Example](crudExample): page with some components to perform CRUD operations with a backend
 - [Layout Example](layoutExample): page with a common app layout
-- [Char Example](chartExample): page with some example charts and data visualisations
+- [Chart Example](chartExample): page with some example charts and data visualisations
