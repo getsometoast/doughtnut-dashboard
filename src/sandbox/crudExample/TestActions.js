@@ -20,8 +20,8 @@ export const deleteTestData = (id) => {
 	return (dispatch) => {
 		return axios.delete(`${ROOT_URL}/testData/${id}`)
 		.then(response => {
-			dispatch(createSuccessAction(id, DELETE_TESTDATA_SUCCESS));
 			history.push('/sandbox/crudExample');
+			dispatch(createSuccessAction(id, DELETE_TESTDATA_SUCCESS));
 		})
 		.catch(error => {
 			console.log('Handle Error Here... ' + error)
