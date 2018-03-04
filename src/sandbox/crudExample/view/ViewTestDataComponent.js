@@ -19,6 +19,10 @@ class ViewTestDataComponent extends Component {
     this.setState({editing: !this.state.editing});
   }
 
+  componentWillReceiveProps(nextProps) {
+    this.setState({currentTestData: nextProps.currentTestData});
+  }
+
   handleDelete = (event) => {
     this.props.deleteTestData(this.state.currentTestData.id);
   }
@@ -39,10 +43,10 @@ class ViewTestDataComponent extends Component {
     this.setState(state);
   }
 
+
   buildTextField = (name, value, hintText=undefined) => {
     return <TextField name={name} value={value} hintText={hintText} onChange={this.handleTextInput} />;
   }
-
 
   render() {
     const { name, amount, endDate } = this.state.currentTestData;
