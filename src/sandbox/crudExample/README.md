@@ -36,4 +36,5 @@ json-server --watch ./src/pages/sandbox/_mock-server/db.json --port 3001
 - [Info on route components and passing parameters](https://github.com/ReactTraining/react-router/issues/4105)
 - [Using the component did mount method to fetch data](https://www.robinwieruch.de/react-fetching-data/)
 - [Where and when to fetch data with redux](https://daveceddia.com/where-fetch-data-redux/)
+- [How to update the component when the state changes](https://reactjs.org/docs/react-component.html#componentwillreceiveprops)
 
