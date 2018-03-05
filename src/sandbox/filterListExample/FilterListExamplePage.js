@@ -8,6 +8,7 @@ import {
   TableRowColumn,
 } from 'material-ui/Table';
 import TextField from 'material-ui/TextField';
+import { RaisedButton } from 'material-ui'
 
 class FilterListExamplePage extends Component {
 
@@ -45,12 +46,26 @@ class FilterListExamplePage extends Component {
     this.setState(state);
   }
 
+
+  onClickTag = (event) => {
+  	const state = this.state;
+
+  	state.tableData.map(item => {
+			if(this.state.filteredData.find(element => element.id === item.id)) {
+				item.tag = 'DONE';
+			}
+  		return item;
+  	})
+
+    this.setState(state);
+  }
+
   render() {
     return (
       <div>
         <h1> this is an example of filtering a list of items with freetext search and applying tags to the filtered list. </h1>
 
-        <TextField onChange={this.handleTextInput} />
+        <TextField onChange={this.handleTextInput} style={{'margin-right': '50px'}}/><RaisedButton label='DONE' onClick={this.onClickTag}/>
 
           <Table>
 				    <TableHeader>
@@ -58,6 +73,7 @@ class FilterListExamplePage extends Component {
 				        <TableHeaderColumn>ID</TableHeaderColumn>
 				        <TableHeaderColumn>Name</TableHeaderColumn>
 				        <TableHeaderColumn>Status</TableHeaderColumn>
+				        <TableHeaderColumn>Tag</TableHeaderColumn>
 				      </TableRow>
 				    </TableHeader>
 				    <TableBody>
@@ -67,6 +83,7 @@ class FilterListExamplePage extends Component {
 				        			<TableRowColumn>{item.id}</TableRowColumn>
 				        			<TableRowColumn>{item.name}</TableRowColumn>
 				        			<TableRowColumn>{item.status}</TableRowColumn>
+											<TableHeaderColumn>{item.tag}</TableHeaderColumn>
 				      			</TableRow>);
 	              })}
 						</TableBody>
