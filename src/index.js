@@ -21,7 +21,6 @@ render(
     <ConnectedRouter history={history}>
         <MuiThemeProvider muiTheme={muiTheme}>
 	      	<Route exact path="/" component={App} />
-
           <Sandbox />
 				</MuiThemeProvider>
     </ConnectedRouter>
