@@ -46,8 +46,7 @@ class FilterListExamplePage extends Component {
     this.setState(state);
   }
 
-
-  onClickTag = (event) => {
+  addDoneTag = (event) => {
   	const state = this.state;
 
   	state.tableData.map(item => {
@@ -60,12 +59,27 @@ class FilterListExamplePage extends Component {
     this.setState(state);
   }
 
+  removeDoneTag = (event) => {
+  	const state = this.state;
+
+  	state.tableData.map(item => {
+			if(this.state.filteredData.find(element => element.id === item.id)) {
+				item.tag = '';
+			}
+  		return item;
+  	})
+
+    this.setState(state);
+  }
+
   render() {
     return (
       <div>
         <h1> this is an example of filtering a list of items with freetext search and applying tags to the filtered list. </h1>
 
-        <TextField onChange={this.handleTextInput} style={{'margin-right': '50px'}}/><RaisedButton label='DONE' onClick={this.onClickTag}/>
+        <TextField onChange={this.handleTextInput} style={{'margin-right': '50px'}}/>
+        <RaisedButton label='+ DONE' onClick={this.addDoneTag} style={{'margin-right': '50px'}}/>
+        <RaisedButton label='- DONE' onClick={this.removeDoneTag} />
 
           <Table>
 				    <TableHeader>
