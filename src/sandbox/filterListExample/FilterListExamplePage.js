@@ -14,8 +14,7 @@ class FilterListExamplePage extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      tableData: [
+    const tableData = [
       	{id: 1, name: 'John Smith', status: 'Employed'},
       	{id: 2, name: 'Randall White', status: 'Employed'},
       	{id: 3, name: 'Elizabeth Jerrywaddle', status: 'Unemployed'},
@@ -27,15 +26,31 @@ class FilterListExamplePage extends Component {
       	{id: 9, name: 'Tinslebottom Friarforce', status: 'Employed'},
       	{id: 10, name: 'Pippa Giantspade', status: 'Employed'},
       	{id: 11, name: 'Costas Nobleman', status: 'Employed'},
-      ]
+      ];
+
+    this.state = {
+      tableData: tableData,
+      filterText: '',
+      filteredData: Object.create(tableData),
     };
+  }
+
+  handleTextInput = (event) => {
+    const state = this.state;
+    state.filterText = event.target.value.toLowerCase();
+    state.filteredData = this.state.tableData.filter(item => item.name.toLowerCase().startsWith(state.filterText) || item.status.toLowerCase().startsWith(state.filterText) )
+    if(!state.filterText) {
+    	state.filteredData = this.state.tableData;
+    }
+    this.setState(state);
   }
 
   render() {
     return (
       <div>
         <h1> this is an example of filtering a list of items with freetext search and applying tags to the filtered list. </h1>
-        <TextField />
+
+        <TextField onChange={this.handleTextInput} />
 
           <Table>
 				    <TableHeader>
@@ -46,7 +61,7 @@ class FilterListExamplePage extends Component {
 				      </TableRow>
 				    </TableHeader>
 				    <TableBody>
-	            {this.state.tableData.map((item, index) => {
+	            {this.state.filteredData.map((item, index) => {
 	                return(
 	                  <TableRow>
 				        			<TableRowColumn>{item.id}</TableRowColumn>
