@@ -11,8 +11,6 @@ class Finances extends Component {
     return (
     <div>
       {childRoutes.map(route => {
-        console.log(`${url}${route.url}`);
-        console.log(route.component);
         return (<Route path={`${url}${route.url}`} component={route.component} />);
       })}
     </div>
