@@ -4,13 +4,13 @@ import { Provider } from 'react-redux'
 import { ConnectedRouter } from 'react-router-redux'
 import store from './store'
 import history from './history'
-import Route from 'react-router-dom/Route'
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles'
 import App from './application/pages/layout' 
 import Sandbox from './sandbox';
 import Finances from './finances';
 import VisibleHeader from './application/styleGuide/header/VisibleHeader';
 import VisibleMenuDrawer from './application/styleGuide/menuDrawer/VisibleMenuDrawer';
+import ChildRouteLoader from './__components/ChildRouteLoader';
 
 const target = document.querySelector('#root')
 
@@ -29,9 +29,7 @@ render(
          <VisibleHeader />
           <main>
             <VisibleMenuDrawer />
-            {childRoutes.map(route => {
-              return (<Route path={route.url} component={route.component} />);
-            })}
+            <ChildRouteLoader routes={childRoutes} />
           </main>
         </div>
 				</MuiThemeProvider>
