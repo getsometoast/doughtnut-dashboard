@@ -19,7 +19,7 @@ const muiTheme = getMuiTheme({
   fontFamily: 'Roboto, sans-serif',
 });
 
-const childRoutes = [App, Sandbox, Finances]
+const routes = [App, Sandbox, Finances]
 
 render(
   <Provider store={store}>
@@ -29,7 +29,7 @@ render(
          <VisibleHeader />
           <main>
             <VisibleMenuDrawer />
-            <ChildRouteLoader routes={childRoutes} />
+            <ChildRouteLoader routes={routes} />
           </main>
         </div>
 				</MuiThemeProvider>
