@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import Route from 'react-router-dom/Route'
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import IncrementButton from '../../styleGuide/buttons/countButton/IncrementCountButton'
 import DecrementButton from '../../styleGuide/buttons/countButton/DecrementCountButton'
 import IncrementAsyncButton from '../../styleGuide/buttons/countButton/IncrementCountAsyncButton'
 import DecrementAsyncButton from '../../styleGuide/buttons/countButton/DecrementCountAsyncButton'
 import NavigationButton from '../../styleGuide/buttons/navigationButton/VisibleNavigationButton'
+
+const url = '/home';
 
 class Home extends Component {
   render() {
@@ -37,4 +38,7 @@ class Home extends Component {
   }
 }
 
-export default (<Route path='/home' component={Home} />);
+export default {
+  component: Home,
+  url
+}

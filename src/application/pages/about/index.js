@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Route from 'react-router-dom/Route'
+
+const url = '/about-us'
 
 class About extends Component {
   render() {
@@ -12,4 +13,7 @@ class About extends Component {
   }
 }
 
-export default (<Route path='/about-us' component={About} />);
+export default {
+	component: About,
+	url
+}

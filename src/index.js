@@ -5,7 +5,7 @@ import { ConnectedRouter } from 'react-router-redux'
 import store from './store'
 import history from './history'
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles'
-import App from './application/pages/layout' 
+import App from './application' 
 import Sandbox from './sandbox';
 import Finances from './finances';
 import VisibleHeader from './application/styleGuide/header/VisibleHeader';

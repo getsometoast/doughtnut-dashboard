@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Route from 'react-router-dom/Route'
+import ChildRouteLoader from '../__components/ChildRouteLoader';
 import CrudExample from './crudExample/'
 import LayoutExample from './layoutExample/'
 import ChartExample from './chartExample'
@@ -10,15 +10,7 @@ const url = '/sandbox';
 const childRoutes = [CrudExample, LayoutExample, ChartExample, TestExample, FilterListExample];
 
 class Sandbox extends Component {
-  render() {
-    return (
-    <div>
-      {childRoutes.map(route => {
-        return (<Route path={`${url}${route.url}`} component={route.component} />);
-      })}
-    </div>
-    );
-  }
+  render() { return (<ChildRouteLoader urlPrefix={url} routes={childRoutes} />); }
 }
 
 export default {
