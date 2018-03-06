@@ -1,15 +1,19 @@
 import React, {Component} from 'react';
 import FilterListExamplePage from './FilterListExamplePage'
-import Route from 'react-router-dom/Route'
+
+const url = '/filterListExample';
 
 class FilterListExample extends Component {
   render() {
     return (
     <div>
-      <Route path="/sandbox/filterListExample" component={FilterListExamplePage} />
+      <FilterListExamplePage />
     </div>
     );
   }
 }
 
-export default FilterListExample;
+export default {
+	component: FilterListExample,
+	url
+}

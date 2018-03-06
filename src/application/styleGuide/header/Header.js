@@ -21,7 +21,7 @@ class Header extends Component {
     <div>
       <FlatButton label='TestData' onClick={this.handleNavigate('/sandbox/crudExample')} />
       <FlatButton label='About' onClick={this.handleNavigate('/about-us')} />
-      <FlatButton label='Home' onClick={this.handleNavigate('/')} />
+      <FlatButton label='Home' onClick={this.handleNavigate('/home')} />
       Count: {count}
     </div>
   );

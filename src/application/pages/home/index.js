@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Route from 'react-router-dom/Route'
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import IncrementButton from '../../styleGuide/buttons/countButton/IncrementCountButton'
 import DecrementButton from '../../styleGuide/buttons/countButton/DecrementCountButton'
@@ -36,4 +37,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default (<Route path='/home' component={Home} />);

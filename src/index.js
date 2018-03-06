@@ -8,6 +8,9 @@ import Route from 'react-router-dom/Route'
 import { MuiThemeProvider, getMuiTheme } from 'material-ui/styles'
 import App from './application/pages/layout' 
 import Sandbox from './sandbox';
+import Finances from './finances';
+import VisibleHeader from './application/styleGuide/header/VisibleHeader';
+import VisibleMenuDrawer from './application/styleGuide/menuDrawer/VisibleMenuDrawer';
 
 const target = document.querySelector('#root')
 
@@ -16,12 +19,21 @@ const muiTheme = getMuiTheme({
   fontFamily: 'Roboto, sans-serif',
 });
 
+const childRoutes = [App, Sandbox, Finances]
+
 render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
         <MuiThemeProvider muiTheme={muiTheme}>
-	      	<Route exact path="/" component={App} />
-          <Sandbox />
+        <div>
+         <VisibleHeader />
+          <main>
+            <VisibleMenuDrawer />
+            {childRoutes.map(route => {
+              return (<Route path={route.url} component={route.component} />);
+            })}
+          </main>
+        </div>
 				</MuiThemeProvider>
     </ConnectedRouter>
   </Provider>,

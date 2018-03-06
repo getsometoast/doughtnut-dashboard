@@ -1,15 +1,19 @@
 import React, {Component} from 'react';
 import AnExampleTestedComponent from './TestedComponentPage'
-import Route from 'react-router-dom/Route'
+
+const url = '/testExample';
 
 class TestExample extends Component {
   render() {
     return (
     <div>
-      <Route path="/sandbox/testExample" component={AnExampleTestedComponent} />
+      <AnExampleTestedComponent />
     </div>
     );
   }
 }
 
-export default TestExample;
+export default {
+	component: TestExample,
+	url
+};

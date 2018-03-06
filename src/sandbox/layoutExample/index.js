@@ -1,15 +1,19 @@
 import React, {Component} from 'react';
 import LayoutExamplePage from './LayoutExamplePage'
-import Route from 'react-router-dom/Route'
+
+const url = '/layoutExample';
 
 class LayoutExample extends Component {
   render() {
     return (
     <div>
-      <Route path="/sandbox/layoutExample" component={LayoutExamplePage} />
+      <LayoutExamplePage />
     </div>
     );
   }
 }
 
-export default LayoutExample;
+export default {
+	component: LayoutExample,
+	url
+}
