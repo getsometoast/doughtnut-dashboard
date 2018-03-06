@@ -1,12 +1,8 @@
-import React from 'react';
-import ChildRouteLoader from '../__components/ChildRouteLoader';
-import Overview from './overview';
-import DailyExpenses from './dailyExpenses';
-
-const url = '/finances';
-const childRoutes = [Overview, DailyExpenses];
+import Blow from './blow';
+import Grow from './grow';
+import Mojo from './mojo';
 
 export default {
-  component:  () => { return (<ChildRouteLoader urlPrefix={url} routes={childRoutes} />); },
-  url
+  url: '/finances',
+  routes: [Blow, Grow, Mojo]
 }

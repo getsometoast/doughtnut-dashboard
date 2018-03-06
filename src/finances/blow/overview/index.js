@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
-const url = '/overview';
-
 class Overview extends Component {
   render() {
     return (
@@ -48,6 +46,6 @@ class Overview extends Component {
 }
 
 export default {
-  component: Overview,
-  url,
+  url: '/overview',
+  component: Overview
 }

@@ -6,8 +6,6 @@ import IncrementAsyncButton from '../../styleGuide/buttons/countButton/Increment
 import DecrementAsyncButton from '../../styleGuide/buttons/countButton/DecrementCountAsyncButton'
 import NavigationButton from '../../styleGuide/buttons/navigationButton/VisibleNavigationButton'
 
-const url = '/home';
-
 class Home extends Component {
   render() {
     return (
@@ -39,6 +37,6 @@ class Home extends Component {
 }
 
 export default {
-  component: Home,
-  url
+  url: '/home',
+  component: Home
 }

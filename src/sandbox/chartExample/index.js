@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import ChartExamplePage from './ChartExamplePage'
 
-const url = '/chartExample';
-
 class ChartExample extends Component {
   render() {
     return (
@@ -14,6 +12,6 @@ class ChartExample extends Component {
 }
 
 export default {
-	component: ChartExample,
-	url
+	url: '/chartExample',
+	component: ChartExample
 }

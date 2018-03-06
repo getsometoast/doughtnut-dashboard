@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import FilterListExamplePage from './FilterListExamplePage'
 
-const url = '/filterListExample';
-
 class FilterListExample extends Component {
   render() {
     return (
@@ -14,6 +12,6 @@ class FilterListExample extends Component {
 }
 
 export default {
-	component: FilterListExample,
-	url
+	url: '/filterListExample',
+	component: FilterListExample
 }

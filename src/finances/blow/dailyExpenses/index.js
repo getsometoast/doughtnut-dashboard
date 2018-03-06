@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 
-const url = '/dailyExpenses';
-
 class DailyExpenses extends Component {
   render() {
     return (
@@ -13,6 +11,6 @@ class DailyExpenses extends Component {
 }
 
 export default {
-  component: DailyExpenses,
-  url,
+	url: '/dailyExpenses',
+  component: DailyExpenses
 }

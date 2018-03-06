@@ -6,8 +6,8 @@ class ChildRouteLoader extends Component {
 		super(props);
 
 		this.state = {
-			routes: props.routes,
-			urlPrefix: props.urlPrefix || '',
+			url: props.url || '',
+			routes: props.routes
 		};
 	}
 
@@ -15,8 +15,10 @@ class ChildRouteLoader extends Component {
     return (
 			<div>
 				{this.state.routes.map(route => {
-	        return (<Route path={`${this.state.urlPrefix}${route.url}`} component={route.component} />);
-	      })}
+					return route.routes ? 
+					<ChildRouteLoader url={`${this.state.url}${route.url}`} routes={route.routes} /> :
+					<Route path={`${this.state.url}${route.url}`} component={route.component} />;
+				})}
       </div>
     );
   }

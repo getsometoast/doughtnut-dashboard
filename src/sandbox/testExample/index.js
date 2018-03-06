@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import AnExampleTestedComponent from './TestedComponentPage'
 
-const url = '/testExample';
-
 class TestExample extends Component {
   render() {
     return (
@@ -14,6 +12,6 @@ class TestExample extends Component {
 }
 
 export default {
-	component: TestExample,
-	url
+	url: '/testExample',
+	component: TestExample
 };

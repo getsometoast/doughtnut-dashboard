@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import CrudExamplePage from './CrudExamplePage'
 
-const url = '/crudExample';
-
 class CrudExample extends Component {
   render() {
     return (
@@ -14,6 +12,6 @@ class CrudExample extends Component {
 }
 
 export default {
-	component: CrudExample,
-	url
+	url: '/crudExample',
+	component: CrudExample
 }

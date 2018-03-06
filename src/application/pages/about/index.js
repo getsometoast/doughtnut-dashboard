@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-const url = '/about-us'
-
 class About extends Component {
   render() {
     return (
@@ -14,6 +12,6 @@ class About extends Component {
 }
 
 export default {
-	component: About,
-	url
+  url: '/about-us',
+	component: About
 }
