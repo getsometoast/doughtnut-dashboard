@@ -66,7 +66,7 @@ class DailyExpenses extends Component {
 	                  <TableRow>
 				        			<TableRowColumn>{item.name}</TableRowColumn>
 				        			<TableRowColumn>{item.frequency}</TableRowColumn>
-											<TableHeaderColumn>{item.amount}</TableHeaderColumn>
+											<TableHeaderColumn><TextField value={item.amount}/></TableHeaderColumn>
 				      			</TableRow>);
 	              })}
 						</TableBody>
